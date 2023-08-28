@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="scripts/jquery-3.7.0.js"></script>
+	<!-- <script src="scripts/jquery.validate.js"></script> -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script> -->
+
+</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ansh Goel Portfolio</title>
+
+<link rel="stylesheet" href="css/style.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href=""> -->
+
+<body>
+	<div class="container">
+		
+		<section class="sign-up">
+			
+			<div class="navigation-bar">
+				<span>ANSH G.</span>
+				<a href="D:\Internship\website\SignUp.html">SIGN UP</a>
+			</div>
+
+			<!-- Javascript to Validate the values entered by the user -->
+			<!-- <script type="text/javascript" src="ValidateForm.js"></script> -->
+
+			<form name="signupform"class="signupform" id="signupform" action="D:\Internship\website\Form.html" method="POST" >
+				<div>
+					<label for="fname">FIRST NAME</label>
+					<input type="text" id="fname" name="fname" class="req">
+					<span class="error_msg" id="fname_error"></span><br>
+				</div>
+				<div>
+					<label for="lname">LAST NAME</label>
+					<input type="text" id="lname" name="lname">
+					<span id="lname_error" class="error_msg"></span><br>
+				</div>
+				<div>
+					<label for="country" class="req">COUNTRY</label>
+					<select id="country" name="country">
+						<option value="Australia">Australia</option>
+						<option value="China">China</option>
+						<option value="India">India</option>
+						<option value="Germany">Germany</option>
+						<option value="UK">UK</option>
+						<option value="USA">USA</option>
+					</select>
+					<span id="country_error" class="error_msg"></span><br>
+				</div>
+				<div>
+					<label for="email">EMAIL</label>
+					<input type="text" id="email" name="email" class="req">
+					<span id="email_error" class="error_msg"></span><br>
+				</div>
+				<div>
+					<label for="pass">PASSWORD</label>
+					<input type="password" id="pass" name="pass" class="req">
+					<span id="pass_error" class="error_msg"></span><br>
+				</div>
+				<div>
+					<label for="repass">RE-ENTER PASSWORD</label>
+					<input type="password" id="repass" class="req" >
+					<span id="repass_error" class="error_msg"></span><br>
+				</div>
+				<input type="submit" name="submit_button" value="SUBMIT" id="submit_btn">
+			</form>
+			<script src="scripts/ValidateForm.js"></script>
+
+		</section>
+	</div>
+</body>
+
