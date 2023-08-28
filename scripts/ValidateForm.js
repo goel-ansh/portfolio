@@ -87,7 +87,7 @@
 // });
 
 
-$(document).ready(function(){
+$(document).load(function(){
 	// alert("Namste");
 	if(document.cookie != ""){
 		// alert("ram ram");
