@@ -87,7 +87,7 @@
 // });
 
 
-$(document).load(function(){
+$(document).ready(function(){
 	// alert("Namste");
 	if(document.cookie != ""){
 		// alert("ram ram");
@@ -281,7 +281,7 @@ $(document).ready(function(){
 		}else{
 			const d = new Date();
 			d.setDate(d.getDate() + 14);
-			alert(d);
+			// alert(d);
 			document.cookie = "fname="+encodeURIComponent(f_name)+";expires="+d+";path=/";
 			document.cookie = "lname="+encodeURIComponent(l_name)+";expires="+d+";path=/";
 			document.cookie = "country="+(country)+";expires="+d+";path=/";
