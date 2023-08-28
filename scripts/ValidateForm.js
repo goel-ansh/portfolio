@@ -95,7 +95,7 @@ $(document).ready(function(){
 
 			var myCookie = document.cookie.split(';');
 			var ids = ['fname', 'lname', 'email','country', 'pass', 'repass']
-			alert(myCookie);
+			// alert(myCookie);
 			var fname = "fname";
 			for(key in myCookie){
 				// alert(myCookie[key]);
@@ -121,7 +121,7 @@ $(document).ready(function(){
 			// $(ids[5]).val(decodeURIComponent($.trim(myCookie[3]).split('=')[1]));
 		}
 
-		alert('hello');
+		// alert('hello');
 		if(confirm("Hello " + $.trim($('#fname').val()) + ", Welcome back do you want to sign in again?")){
 			
 			getCookie();
@@ -280,7 +280,7 @@ $(document).ready(function(){
 
 		}else{
 			const d = new Date();
-			d.setDate(d.getDate() + 10);
+			d.setDate(d.getDate() + 14);
 			alert(d);
 			document.cookie = "fname="+encodeURIComponent(f_name)+";expires="+d+";path=/";
 			document.cookie = "lname="+encodeURIComponent(l_name)+";expires="+d+";path=/";
