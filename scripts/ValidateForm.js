@@ -282,15 +282,30 @@ $(document).ready(function(){
 
 		}else{
 			const d = new Date();
-			d.setDate(d.getDate() + 14);
-			// alert(d);
-			document.cookie = "fname="+encodeURIComponent(f_name)+";expires="+d+";path=/";
-			document.cookie = "lname="+encodeURIComponent(l_name)+";expires="+d+";path=/";
-			document.cookie = "country="+(country)+";expires="+d+";path=/";
-			document.cookie = "email="+encodeURIComponent(email)+";expires="+d+";path=/";
-			document.cookie = "pass="+encodeURIComponent(pass)+";expires="+d+";path=/";
-			document.cookie = "repass="+encodeURIComponent(repass)+";expires="+d+";path=/";
+			d.setDate(d.getDate() + 10);
 
+			if($('#rememberMe').is(':checked')){
+
+				console.log($('#rememberMe').is(':checked'));
+
+			// alert(d);
+				document.cookie = "fname="+encodeURIComponent(f_name)+";expires="+d+";path=/";
+				document.cookie = "lname="+encodeURIComponent(l_name)+";expires="+d+";path=/";
+				document.cookie = "country="+(country)+";expires="+d+";path=/";
+				document.cookie = "email="+encodeURIComponent(email)+";expires="+d+";path=/";
+				document.cookie = "pass="+encodeURIComponent(pass)+";expires="+d+";path=/";
+				document.cookie = "repass="+encodeURIComponent(repass)+";expires="+d+";path=/";
+
+			}else{
+
+				console.log($('#rememberMe').is(':checked'));
+				document.cookie = "fname=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/";
+				document.cookie = "lname=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/";
+				document.cookie = "country=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/";
+				document.cookie = "email=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/";
+				document.cookie = "pass=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/";
+				document.cookie = "repass=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/";
+			}
 			return true;
 		}
 
