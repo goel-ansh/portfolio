@@ -156,6 +156,14 @@ section{
 .navigation-bar a:visited{
 	color: black;
 }
+#theme{
+	font-family: 'Oswald', sans-serif;
+	padding: 0px 5px;
+/*	background-color: white;*/
+	margin-left: 1250px;
+	margin-top: 10px;
+	font-size: 20px;
+}
 .headtext{
 	color: rgb(25, 25, 25);
 	font-size: 50px;
