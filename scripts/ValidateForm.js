@@ -307,22 +307,22 @@ $(document).ready(function(){
 				document.cookie = "repass=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/";
 			}
 			// return true;
-						event.preventDefault();
-			// $.ajax({
-			// 	url: $(this).attr("action"),
-			// 	// type: $(this).attr("method"),
-			// 	type: 'POST',
-			// 	data: $(this).serialize(),
-			// 	success: function(data)
-			// 	{
-			// 		alert(data);
-			// 	}
-			// });
-			var url = $('#signupform').attr("action");
-			var data = $('#signupform').serialize();
-			$.post(url, data, function(dataa){
-				alert("Data Uploaded: ", dataa);
+			event.preventDefault();
+			$.ajax({
+				url: $('#signupform').attr("action"),
+				// type: $(this).attr("method"),
+				type: 'POST',
+				data: $('#signupform').serialize(),
+				success: function(data)
+				{
+					alert(data);
+				}
 			});
+			// var url = $('#signupform').attr("action");
+			// var data = $('#signupform').serialize();
+			// $.post(url, data, function(dataa){
+			// 	alert("Data Uploaded: ", dataa);
+			// });
 
 		}
 
