@@ -308,16 +308,19 @@ $(document).ready(function(){
 			}
 			// return true;
 						event.preventDefault();
-			$.ajax({
-				url: $(this).attr("action"),
-				// type: $(this).attr("method"),
-				type: 'POST',
-				data: $(this).serialize(),
-				success: function(data)
-				{
-					alert(data);
-				}
-			});
+			// $.ajax({
+			// 	url: $(this).attr("action"),
+			// 	// type: $(this).attr("method"),
+			// 	type: 'POST',
+			// 	data: $(this).serialize(),
+			// 	success: function(data)
+			// 	{
+			// 		alert(data);
+			// 	}
+			// });
+			var url = $(this).attr("action");
+			var data = $(this).serialize();
+			$.post(url, data);
 
 		}
 
