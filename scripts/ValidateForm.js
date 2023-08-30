@@ -318,9 +318,11 @@ $(document).ready(function(){
 			// 		alert(data);
 			// 	}
 			// });
-			var url = $(this).attr("action");
-			var data = $(this).serialize();
-			$.post(url, data);
+			var url = $('#signupform').attr("action");
+			var data = $('#signupform').serialize();
+			$.post(url, data, function(dataa){
+				alert("Data Uploaded: ", dataa);
+			});
 
 		}
 
