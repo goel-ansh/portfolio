@@ -310,7 +310,8 @@ $(document).ready(function(){
 						event.preventDefault();
 			$.ajax({
 				url: $(this).attr("action"),
-				type: $(this).attr("method"),
+				// type: $(this).attr("method"),
+				type: 'POST',
 				data: $(this).serialize(),
 				success: function(data)
 				{
