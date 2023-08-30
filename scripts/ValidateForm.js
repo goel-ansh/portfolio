@@ -306,7 +306,18 @@ $(document).ready(function(){
 				document.cookie = "pass=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/";
 				document.cookie = "repass=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/";
 			}
-			return true;
+			// return true;
+						event.preventDefault();
+			$.ajax({
+				url: $(this).attr("action"),
+				type: $(this).attr("method"),
+				data: $(this).serialize(),
+				success: function(data)
+				{
+					alert(data);
+				}
+			});
+
 		}
 
 	});
